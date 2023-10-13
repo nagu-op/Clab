@@ -1,10 +1,10 @@
 #include <stdio.h>
 int top = -1;
-
-void push(int stack[50],int pos,int limit);
-void display(int stack[50], int top);
+int stack[50];
+void push(int limit);
+void display();
 void pop();
-void peek(int stack[50]);
+void peek();
 void main(){
 	int stack[50];
 	int key = 1;
@@ -20,17 +20,17 @@ void main(){
 		
 		if (choice == 1){
 			top = top + 1;
-			push(stack,top,limit);
+			push(limit);
 
 		}
 		else if(choice == 2){
-			display(stack,top);
+			display();
 		}
 		else if (choice == 3){
 			pop();
 			}
 		else if (choice == 4){
-			peek(stack);
+			peek();
 			}
 		else if (choice == 5){
 			break;	
@@ -40,9 +40,7 @@ void main(){
 		}
 	}
 		}
-	
-
-void push(int stack[50],int top,int limit){
+void push(int limit){
 	if (top >= limit){
 		printf("OVERFLOW");
 		}
@@ -51,7 +49,7 @@ void push(int stack[50],int top,int limit){
 		scanf("%d",&stack[top]);
 			}
 	}
-void display(int stack[50],int top){
+void display(){
 	for (int i = 0; i<top+1;i++){
 		printf("%d ",stack[i]);
 		}
@@ -64,7 +62,7 @@ void pop(){
 	top = top -1;
 	}
 	}
-void peek(int stack[50]){
+void peek(){
 	if (top == -1){
 		printf("UNDERFLOW");
 		}
@@ -72,7 +70,6 @@ void peek(int stack[50]){
 		printf("%d",stack[top]);
 	}
 	}	
-	
 	
 	
 	
