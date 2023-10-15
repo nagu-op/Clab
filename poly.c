@@ -16,6 +16,7 @@ for (int i = 0; i < limit;i ++){
 	printf("Enter coefficent : ");
 	scanf("%d",&a[i].coef);
 	}
+printf("The final form is: \n");
 int plus = limit - 1;
 for(int i = 0; i< limit;i++){
 	
@@ -28,5 +29,6 @@ for(int i = 0; i< limit;i++){
 		plus--;
 
 }
+printf("\n");
 
 }
