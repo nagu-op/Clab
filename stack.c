@@ -19,7 +19,7 @@ void main(){
 		scanf("%d",&choice);
 		
 		if (choice == 1){
-			top = top + 1;
+			
 			push(limit);
 
 		}
@@ -46,6 +46,7 @@ void push(int limit){
 		}
 	else{	
 		printf("Enter the element to appended");
+		top = top+1;
 		scanf("%d",&stack[top]);
 			}
 	}
