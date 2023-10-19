@@ -6,22 +6,18 @@ void display();
 void pop();
 void peek();
 void main(){
-	int stack[50];
 	int key = 1;
 	int limit;
 	printf("Enter the stack limit:");
 	scanf("%d",&limit);
-	
+	printf("\n 1.push \n 2. display \n 3. pop\n 4.peek\n 5.exit\n");
 	while (key == 1){
-		printf("\n 1.push \n 2. display \n 3. pop\n 4.peek\n 5.exit\n");
-		printf("Enter the choice");
+		printf("\nEnter the choice");
 		int choice;
 		scanf("%d",&choice);
 		
 		if (choice == 1){
-			
 			push(limit);
-
 		}
 		else if(choice == 2){
 			display();
@@ -41,7 +37,7 @@ void main(){
 	}
 		}
 void push(int limit){
-	if (top >= limit){
+	if (top >= limit-1){
 		printf("OVERFLOW");
 		}
 	else{	
@@ -60,6 +56,7 @@ void pop(){
 	printf("UNDERFLOW");
 	}	
 	else{
+	printf("%d is poped",top);
 	top = top -1;
 	}
 	}
@@ -68,24 +65,7 @@ void peek(){
 		printf("UNDERFLOW");
 		}
 	else{
-		printf("%d",stack[top]);
+		printf("The top most element is %d \n",stack[top]);
 	}
 	}	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
