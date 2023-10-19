@@ -47,9 +47,14 @@ void push(int limit){
 			}
 	}
 void display(){
+	if(top == -1){
+		printf("The stack is empty");
+	}
+	else{
 	for (int i = 0; i<top+1;i++){
 		printf("%d ",stack[i]);
 		}
+	
 	}
 void pop(){
 	if (top == -1){
