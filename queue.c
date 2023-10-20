@@ -3,6 +3,7 @@ int rear=-1, front = 0;
 void enqueue(int limit);
 void display(int limit);
 void dequeue();
+void peek();
 int queue[100];
 void main(){
 	int limit, key = 1;
@@ -55,7 +56,7 @@ void display(int limit){
 		}	
 	else{
 		printf("The queue is \n");
-		for(int i = 0; i < limit; i++){
+		for(int i = ; i <= rear; i++){
 			printf("%d",queue[i]);
 			}
 		printf("\n");
@@ -71,13 +72,12 @@ void dequeue(){
 		front = 0;
 		rear = -1;
 	}
-	else{
+	else {
 	printf("The deleted element is %d",queue[front]);
 	front +=1;
 	}
 	
 }
-
 
 
 
