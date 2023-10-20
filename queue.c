@@ -65,10 +65,17 @@ void dequeue(){
 	if (rear < front){
 		printf("The Queue is empty\n");
 		}
+	
+	else if (front == rear){
+		printf("The deleted element is %d",queue[front]);
+		front = 0;
+		rear = -1;
+	}
 	else{
 	printf("The deleted element is %d",queue[front]);
 	front +=1;
 	}
+	
 }
 
 
