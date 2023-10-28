@@ -3,14 +3,14 @@ int a[50],front=-1,rear=-1,max;
 void enqueue();
 void dequeue();
 void display();
+void peek();
 void main()
  {
-   int choice = 5;
+   int choice = 8;
    printf("Enter the maximum of queue\n");
    scanf("%d",&max);
-   printf("\n1.Enqueue\n 2.Dequeu\n3.Display\n4.Exit\n");
-   
-   while (choice != 4){
+   printf("\n1.Enqueue\n2.Dequeu\n3.Display\n4.Peek\n5.Exit\n");
+   while (choice != 5){
    	printf("\n Enter your choice: \n");
    	scanf("%d",&choice);
    	if (choice == 1){
@@ -18,9 +18,12 @@ void main()
    		}	
    	else if (choice == 2){
    		dequeue();
-   		}c
+   		}
    	else if(choice == 3){
    		display();
+   	}
+   	else if(choice == 4){
+   		peek();
    	}
  }
  }
@@ -88,3 +91,12 @@ void display()
    }
   printf("\n");
  }
+void peek(){
+	if (front == -1){
+		printf("The Circular Queue is empty\n");
+	
+	 o0
+	else{
+		printf("%d is the peek",a[rear]);
+	}
+}
