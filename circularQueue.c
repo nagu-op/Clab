@@ -5,40 +5,24 @@ void dequeue();
 void display();
 void main()
  {
-   int choice;
+   int choice = 5;
    printf("Enter the maximum of queue\n");
    scanf("%d",&max);
-   do
-    {
-	printf("Enter the choice\t1)Enqueue\t2)Dequeue\t3)Display\t4)Exit\n");
-	scanf("%d",&choice);
-	switch(choice)
-	 {
-	  case 1:
-	   {
-	    enqueue();
-	    break;
-	   }
-	 case 2:
-	  {
-	   dequeue();
-	   break;
-	  }
-	case 3:
-	 {
-	  display();
-	  break;
-	 }
-	case 4:
-	 {
-	  break;
-	 }
-	default :
-	 {
-	  printf("Invalid choice\n");
-	 }
-	}
-     } while(choice!=4);
+   printf("\n1.Enqueue\n 2.Dequeu\n3.Display\n4.Exit\n");
+   
+   while (choice != 4){
+   	printf("\n Enter your choice: \n");
+   	scanf("%d",&choice);
+   	if (choice == 1){
+   		enqueue();
+   		}	
+   	else if (choice == 2){
+   		dequeue();
+   		}c
+   	else if(choice == 3){
+   		display();
+   	}
+ }
  }
 void enqueue()
  {
