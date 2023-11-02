@@ -95,7 +95,7 @@ void peek(){
 	if (front == -1){
 		printf("The Circular Queue is empty\n");
 	
-	 o0
+	 
 	else{
 		printf("%d is the peek",a[rear]);
 	}
