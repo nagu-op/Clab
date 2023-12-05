@@ -82,7 +82,7 @@ int main() {
     // Perform merge sort
     mergeSort(arr, 0, n - 1);
 
-    printf("Sorted array is \n");
+    printf(" Array after Merge sort  \n");
     for (int i = 0; i < n; i++)
         printf("%d ", arr[i]);
     printf("\n");
